@@ -1,0 +1,16 @@
+# mkinitcpio preset file for the '$UID' package
+ALL_config="/etc/mkinitcpio.conf"
+ALL_kver="/1000/vmlinuz-$UID"
+ALL_microcode=(/1000/*-ucode.img)
+
+PRESETS=('default' 'fallback')
+
+#default_config="/etc/mkinitcpio.conf"
+default_image="/1000/initramfs-$UID.img"
+#default_uki="/efi/EFI/Linux/arch-$UID.efi"
+#default_options="--splash /usr/share/systemd/1000ctl/splash-arch.bmp"
+
+#fallback_config="/etc/mkinitcpio.conf"
+fallback_image="/1000/initramfs-$UID-fallback.img"
+#fallback_uki="/efi/EFI/Linux/arch-$UID-fallback.efi"
+fallback_options="-S autodetect"
